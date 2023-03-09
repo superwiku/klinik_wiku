@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="klinikwiku_dokter_action" model="ir.actions.act_window">
+        <field name="name">Dokter</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">klinikwiku.dokter</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+<!-- This Menu Item must have a parent and an action -->
+    <menuitem id="klinikwiku_dokter_menu_action"
+              name="Dokter"
+              parent="klinikwiku_dokter_menu_categ"
+              action="klinikwiku_dokter_action"
+              sequence="10"/>
+
+</odoo>

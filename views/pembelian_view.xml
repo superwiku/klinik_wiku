@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- klinikwiku.pembelian tree view -->
+    <record id="model_name_view_tree" model="ir.ui.view">
+        <field name="name">klinikwiku.pembelian.view.tree</field>
+        <field name="model">klinikwiku.pembelian</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="tgl"/>
+                <field name="obatnya"/>
+                <field name="satuan"/>
+                <field name="harga_satuan"/>
+                <field name="quantity"/>
+                <field name="total_harga"/>                
+            </tree>
+        </field>
+    </record>
+
+    <!-- klinikwiku.pembelian form view -->
+    <record id="model_name_view_form" model="ir.ui.view">
+        <field name="name">klinikwiku.pembelian.view.form</field>
+        <field name="model">klinikwiku.pembelian</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="tgl"/>                        
+                    </group>
+                    <group name="Detail" string="string">
+                        <field name="obatnya"/>
+                        <field name="satuan"/>
+                        <field name="harga_satuan"/>
+                        <field name="quantity"/>
+                        <field name="total_harga"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- klinikwiku.pembelian action window -->
+    <record id="klinikwiku_pembelian_action" model="ir.actions.act_window">
+        <field name="name">klinikwiku.pembelian.action</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">klinikwiku.pembelian</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="klinikwiku_pembelian_menu_act" 
+            name="Pembelian" 
+            parent="klinikwiku_admin_menu_categ" 
+            action="klinikwiku_pembelian_action" 
+            sequence="10"/>
+
+</odoo>

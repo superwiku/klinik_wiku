@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_klinikwiku_dokter,access.klinikwiku.dokter,model_klinikwiku_dokter,,1,1,1,1
+access_klinikwiku_obat,access.klinikwiku.obat,model_klinikwiku_obat,,1,1,1,1
+access_klinikwiku_pembelian,access.klinikwiku.pembelian,model_klinikwiku_pembelian,,1,1,1,1

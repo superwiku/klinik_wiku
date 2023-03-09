@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!-- klinikwiku.obat tree view -->
+<record id="klinikwiku_obat_view_tree" model="ir.ui.view">
+    <field name="name">klinikwiku.obat.view.tree</field>
+    <field name="model">klinikwiku.obat</field>
+    <field name="arch" type="xml">
+        <tree>
+            <!-- Add your fields here -->
+            <field name="name"/>
+            <field name="satuan"/>
+            <field name="harga_satuan"/>
+            <field name="stok"/>
+        </tree>
+    </field>
+</record>
+<!-- klinikwiku.obat form view -->
+<record id="klinikwiku_obat_view_form" model="ir.ui.view">
+    <field name="name">klinikwiku.obat.view.form</field>
+    <field name="model">klinikwiku.obat</field>
+    <field name="arch" type="xml">
+        <form string="">
+            <sheet>
+                <group>
+                    <!-- Add your fields here -->
+                    <field name="name"/>
+                    <field name="satuan"/>
+                    <field name="harga_satuan"/>
+                    <field name="stok"/>
+                </group>
+            </sheet>
+        </form>
+    </field>
+</record>
+    <!-- klinikwiku.obat action window -->
+    <record id="klinikwiku_obat_action" model="ir.actions.act_window">
+        <field name="name">klinikwiku.obat.action</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">klinikwiku.obat</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="klinikwiku_obat_menu_act" 
+            name="Daftar Obat" 
+            parent="klinikwiku_admin_menu_categ" 
+            action="klinikwiku_obat_action" 
+            sequence="20"/>
+
+</odoo>
